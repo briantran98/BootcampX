@@ -4,7 +4,7 @@ CREATE TABLE teachers (
     start_date DATE,
     end_date DATE,
     is_active BOOLEAN DEFAULT TRUE
-)
+);
 CREATE TABLE assistance_requests (
     id SERIAL PRIMARY KEY NOT NULL,
     student_id INTEGER REFERENCES students(id) ON DELETE CASCADE,
@@ -15,4 +15,4 @@ CREATE TABLE assistance_requests (
     completed_at TIMESTAMP,
     student_feedback TEXT,
     teacher_feedback TEXT
-)
+);
